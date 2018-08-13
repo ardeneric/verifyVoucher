@@ -47,16 +47,7 @@ public class VerifyEvoucherApplication {
 		return em;
 	}
 
-	@Bean
-	public DataSource dataSource() {
-		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource
-				.setUrl("jdbc:mysql://itc.ciu6a2q0dqp7.us-west-2.rds.amazonaws.com/demo?jdbcCompliantTruncation=false");
-		dataSource.setUsername("voucher");
-		dataSource.setPassword("jay74{craves");
-		return dataSource;
-	}
+
 
 	@Bean
 	public PlatformTransactionManager transactionManager(EntityManagerFactory emf) {
