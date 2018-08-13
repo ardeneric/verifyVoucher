@@ -9,11 +9,13 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import lombok.Data;
 
 @Entity
 @Data
+@Table(name = "vouchers")
 public class Evoucher implements Serializable {
 	
 	private static final long serialVersionUID = 8886841202378551631L;
@@ -25,6 +27,6 @@ public class Evoucher implements Serializable {
 	private LocalDateTime created;
 	private LocalDateTime modified;
 	
-	@Enumerated(EnumType.STRING)
-	private Status status;
+	//@Enumerated(EnumType.String)
+	private String status;
 }
